@@ -32,15 +32,15 @@ public class EstrenosFragment extends Fragment implements EstrenoAdapter.OnEstre
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.fragment_estrenos);
-        adapter = new EstrenoAdapter(getLayoutInflater(), Data.getData(), this);
-        binding.list.setAdapter(adapter);
-        binding.list.setLayoutManager(new LinearLayoutManager(this));
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
+        binding = DataBindingUtil.inflate(this, R.layout.fragment_estrenos, container, false);
+        adapter = new EstrenoAdapter(getLayoutInflater(null), Data.getData(), this);
+        binding.list.setAdapter(adapter);
+        binding.list.setLayoutManager(new LinearLayoutManager(getContext()));
         return inflater.inflate(R.layout.fragment_estrenos, container, false);
     }
 

@@ -31,16 +31,18 @@ public class ProximosEstrenosFragment extends Fragment implements ProximoEstreno
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_movies);
-        adapter1 = new ProximoEstrenoAdapter(getLayoutInflater(), Datape.getDatape(), this);
-        binding.list.setAdapter(adapter1);
-        binding.list.setLayoutManager(new LinearLayoutManager(this));
+
 
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_proximos_estrenos, container, false);
+        binding = DataBindingUtil.inflate(this, R.layout.fragment_proximos_estrenos, container, false);
+        adapter1 = new ProximoEstrenoAdapter(getLayoutInflater(null), Datape.getDatape(), this);
+        binding.list.setAdapter(adapter1);
+        binding.list.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        return binding.getRoot();
     }
 
     @Override
