@@ -54,7 +54,7 @@ public class EstrenoAdapter extends RecyclerView.Adapter<EstrenoAdapter.EstrenoH
 
     @Override
     public EstrenoHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = inflater.inflate(R.layout.fragment_estrenos, parent, false);
+        View v = inflater.inflate(R.layout.activity_tabbed, parent, false);
         return new EstrenoHolder(v);
     }
 

@@ -20,10 +20,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MoviesActivity" />
+        <activity android:name=".EstrenosActivity" />
         <activity android:name=".RegistroActivity" />
         <activity android:name=".DetailActivity" />
-        <activity android:name=".recordatorio.RecordatorioActivity"></activity>
+        <activity android:name=".recordatorio.RecordatorioActivity" />
+        <activity
+            android:name=".Tabbed.TabbedActivity"
+            android:label="@string/title_activity_tabbed"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

@@ -23,8 +23,8 @@ public class RegistroActivity extends AppCompatActivity {
     }
     public void goToMain(){
 
-        Intent intent2 = new Intent(this, MainActivity.class);
-        startActivity(intent2); //material design II
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent); //material design II
     }
 
 

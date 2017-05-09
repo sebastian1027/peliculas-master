@@ -15,6 +15,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TabHost;
 
 import java.util.List;
 
@@ -25,7 +26,9 @@ import movil.unicauca.peliculas.models.Estrenos;
 import movil.unicauca.peliculas.util.Data;
 import movil.unicauca.peliculas.util.Datape;
 
-public class MoviesActivity extends AppCompatActivity implements  EstrenoAdapter.OnEstrenoSelected, ProximoEstrenoAdapter.OnProxEstrenoSelected, View.OnClickListener, DrawerLayout.DrawerListener, NavigationView.OnNavigationItemSelectedListener {
+public class EstrenosActivity extends AppCompatActivity implements  EstrenoAdapter.OnEstrenoSelected,
+        ProximoEstrenoAdapter.OnProxEstrenoSelected, View.OnClickListener,
+        DrawerLayout.DrawerListener, NavigationView.OnNavigationItemSelectedListener {
 
     ActivityMoviesBinding binding;
     EstrenoAdapter adapter;

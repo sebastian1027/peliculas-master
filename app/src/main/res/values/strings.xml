@@ -42,5 +42,10 @@
         <item>Los Pitufos</item>
         <item>El Cielo Espera</item>
     </string-array>
+    <string name="title_activity_tabbed">TabbedActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="premiers">Estrenos</string>
+    <string name="nextreleases">Próximos Estrenos</string>
 
 </resources>

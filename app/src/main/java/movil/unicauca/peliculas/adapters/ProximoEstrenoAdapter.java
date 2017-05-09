@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 
 import java.util.List;
 
-import movil.unicauca.peliculas.MoviesActivity;
+
 import movil.unicauca.peliculas.R;
 import movil.unicauca.peliculas.databinding.FragmentProximosEstrenosBinding;
 import movil.unicauca.peliculas.models.ProximosEstrenos;

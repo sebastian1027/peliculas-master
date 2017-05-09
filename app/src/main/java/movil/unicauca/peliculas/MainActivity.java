@@ -5,6 +5,7 @@ import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import movil.unicauca.peliculas.Tabbed.TabbedActivity;
 import movil.unicauca.peliculas.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,13 +19,14 @@ public class MainActivity extends AppCompatActivity {
         binding.setHandler(this);
     }
 
-    public void goToNext(){
-        Intent intent = new Intent(this, MoviesActivity.class);
-        startActivity(intent); //material design II
+    public void goToNext() {
+        Intent intent = new Intent(this, TabbedActivity.class);
+        startActivity(intent);
     }
 
+
     public void goToRegister(){
-        Intent intent1 = new Intent(this, RegistroActivity.class);
-        startActivity(intent1);
+        Intent intent = new Intent(this, RegistroActivity.class);
+        startActivity(intent);
     }
 }

@@ -12,7 +12,7 @@ import android.widget.RatingBar;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import movil.unicauca.peliculas.MoviesActivity;
+
 import movil.unicauca.peliculas.R;
 
 /**
@@ -41,6 +41,8 @@ public class Calificacion extends AppCompatActivity implements AdapterView.OnIte
             }
         });
 
+        //colocar aqui abajo lo de btnenviar
+
         button = (Button) findViewById(R.id.btnenviar);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +52,8 @@ public class Calificacion extends AppCompatActivity implements AdapterView.OnIte
                 //startActivity(intent);
             }
         });
+
+
 
 
         moviesestrenos.setOnItemSelectedListener(this);
