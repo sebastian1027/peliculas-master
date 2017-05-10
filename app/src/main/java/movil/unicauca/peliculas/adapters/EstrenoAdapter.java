@@ -10,14 +10,49 @@ import android.widget.BaseAdapter;
 import java.util.List;
 import movil.unicauca.peliculas.R;
 import movil.unicauca.peliculas.databinding.FragmentEstrenosBinding;
+import movil.unicauca.peliculas.databinding.TemplateEstrenosBinding;
 import movil.unicauca.peliculas.models.Estrenos;
+import movil.unicauca.peliculas.models.ProximosEstrenos;
 
 /**
  * Created by Sebastianl on 03/05/2017.
  */
 
-public class EstrenoAdapter extends RecyclerView.Adapter<EstrenoAdapter.EstrenoHolder> {
+public class EstrenoAdapter extends RecyclerView.Adapter<EstrenoAdapter.EstrenoHolder> implements BaseAdapter  {
+    public EstrenoAdapter(LayoutInflater layoutInflater, List<Estrenos> data) {
+    }
 
+    public EstrenoAdapter(LayoutInflater inflater, List<Estrenos> data, OnEstrenoSelected onEstrenoSelected) {
+        this.inflater = inflater;
+        this.data = data;
+        this.onEstrenoSelected = onEstrenoSelected;
+    }
+
+    @Override
+    public int getCount() {
+        return data.size();
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return data.get(position);
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        TemplateEstrenosBinding binding = TemplateEstrenosBinding.inflate(inflater);
+        binding.setEstrenos(data.get(position));
+        return binding.getRoot();
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return super.getItemId(position);
+    }
+    //poner video de databinding2 en 36:00
+
+
+    //region comentarios
 /*
     //region Comentar esto
     @Override
@@ -37,6 +72,7 @@ public class EstrenoAdapter extends RecyclerView.Adapter<EstrenoAdapter.EstrenoH
     }
     //endregion
 */
+//endregion
     public interface OnEstrenoSelected{
         void onEstreno(int position);
     }
@@ -46,11 +82,7 @@ public class EstrenoAdapter extends RecyclerView.Adapter<EstrenoAdapter.EstrenoH
 
 
 
-    public EstrenoAdapter(LayoutInflater inflater, List<Estrenos> data, OnEstrenoSelected onEstrenoSelected) {
-        this.inflater = inflater;
-        this.data = data;
-        this.onEstrenoSelected = onEstrenoSelected;
-    }
+
 
     @Override
     public EstrenoHolder onCreateViewHolder(ViewGroup parent, int viewType) {

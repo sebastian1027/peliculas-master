@@ -4,8 +4,8 @@
     >
     <data>
         <variable
-            name="adaptere"
-            type="movil.unicauca.peliculas.adapters.EstrenoAdapter"/>
+            name="adapterpe"
+            type="movil.unicauca.peliculas.adapters.ProximoEstrenoAdapter"/>
     </data>
 
     <RelativeLayout
@@ -19,10 +19,10 @@
         >
 
         <ListView
-            android:id="@+id/list1"
+            android:id="@+id/list2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:adapter="@{adaptere}"
+            app:adapter="@{adapterpe}"
             />
 
     </RelativeLayout>

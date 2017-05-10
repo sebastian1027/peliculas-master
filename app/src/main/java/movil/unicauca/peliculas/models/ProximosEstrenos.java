@@ -1,12 +1,27 @@
 package movil.unicauca.peliculas.models;
 
+import android.view.LayoutInflater;
+
+import java.util.List;
+
+import movil.unicauca.peliculas.adapters.EstrenoAdapter;
+
 /**
  * Created by Sebastianl on 03/05/2017.
  */
 
-public class ProximosEstrenos {
+public class ProximosEstrenos extends EstrenoAdapter {
 
     String namepe, dateofpremier, durationpe, gender, gender1, gender2, imagepe;
+
+    public ProximosEstrenos(LayoutInflater layoutInflater, List<ProximosEstrenos> data) {
+        super(layoutInflater, data);
+    }
+
+    /*public ProximosEstrenos(LayoutInflater inflater, List<Estrenos> data, OnEstrenoSelected onEstrenoSelected) {
+        super(inflater, data, onEstrenoSelected);
+    }*/
+
 
     public String getNamepe() {
         return namepe;

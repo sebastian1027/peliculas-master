@@ -1,20 +1,10 @@
 package movil.unicauca.peliculas.Tabbed;
 
-
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-
-import movil.unicauca.peliculas.R;
 import movil.unicauca.peliculas.adapters.ProximoEstrenoAdapter;
 import movil.unicauca.peliculas.databinding.ActivityMoviesBinding;
-import movil.unicauca.peliculas.util.Datape;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -35,7 +25,7 @@ public class ProximosEstrenosFragment extends Fragment implements ProximoEstreno
 
     }
 
-    @Override
+    /*@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = DataBindingUtil.inflate(this, R.layout.fragment_proximos_estrenos, container, false);
         adapter1 = new ProximoEstrenoAdapter(getLayoutInflater(null), Datape.getDatape(), this);
@@ -43,7 +33,7 @@ public class ProximosEstrenosFragment extends Fragment implements ProximoEstreno
         binding.list.setLayoutManager(new LinearLayoutManager(getContext()));
 
         return binding.getRoot();
-    }
+    }*/
 
     @Override
     public void onProxEstreno(int position) {

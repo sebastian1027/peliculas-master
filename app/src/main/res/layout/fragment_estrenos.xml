@@ -11,7 +11,7 @@
 
         <variable
             name="estrenos"
-            type="movil.unicauca.peliculas.models.Estrenos"/>
+            type="movil.unicauca.peliculas.models.Estrenos"/>  <!-- ruta de la clase del modelo-->
     </data>
 
     <android.support.constraint.ConstraintLayout

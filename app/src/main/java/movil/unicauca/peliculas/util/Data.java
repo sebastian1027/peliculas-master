@@ -12,9 +12,12 @@ import movil.unicauca.peliculas.models.Estrenos;
 
 public class Data {
 
-    private static List<Estrenos> data;
+    //private static List<Estrenos> data;
 
-    public static List<Estrenos> getData(){
+    public static List<Estrenos> datae;
+
+    //region comentar
+    /*getData(){
          if (data == null){
              data = new ArrayList<>();
 
@@ -64,5 +67,6 @@ public class Data {
 
          }
          return data;
-    }
+    }*/
+    //endregion
 }

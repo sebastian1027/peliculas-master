@@ -6,19 +6,43 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
 
 import java.util.List;
 
 
 import movil.unicauca.peliculas.R;
 import movil.unicauca.peliculas.databinding.FragmentProximosEstrenosBinding;
+import movil.unicauca.peliculas.databinding.TemplateProximosEstrenosBinding;
 import movil.unicauca.peliculas.models.ProximosEstrenos;
 
 /**
  * Created by Sebastianl on 03/05/2017.
  */
 
-public class ProximoEstrenoAdapter extends RecyclerView.Adapter<ProximoEstrenoAdapter.PEHolder>{
+public class ProximoEstrenoAdapter extends RecyclerView.Adapter<ProximoEstrenoAdapter.PEHolder> implements BaseAdapter{
+
+    @Override
+    public int getCount() {
+        return datape.size();
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return datape.get(position);
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        TemplateProximosEstrenosBinding binding = TemplateProximosEstrenosBinding.inflate(inflater);
+        binding.setProximosestrenos(datape.get(position));
+        return binding.getRoot();
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return super.getItemId(position);
+    }
 
     public interface OnProxEstrenoSelected{
         void onProxEstreno(int position);

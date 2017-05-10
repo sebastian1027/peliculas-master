@@ -11,9 +11,12 @@ import movil.unicauca.peliculas.models.ProximosEstrenos;
 
 public class Datape {
 
-    private static List<ProximosEstrenos> datape;
+    //private static List<ProximosEstrenos> datape;
 
-    public static List<ProximosEstrenos> getDatape(){
+    public static List<ProximosEstrenos> datape;
+
+    //region comentar
+    /*getDatape(){
         if (datape == null){
             datape = new ArrayList<>();
 
@@ -64,6 +67,7 @@ public class Datape {
 
         }
         return datape;
-    }
+    }*/
+    //endregion
 
 }
